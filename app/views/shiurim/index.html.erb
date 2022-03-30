@@ -1,5 +1,8 @@
 <ul>
   <% @shiurim.each do |shiur| %>
-    <li><strong><%= shiur.name %></strong><br>Should take about <%= shiur.time %> of an hour.</li>
+    <li>
+      <a href="<%= url_for shiur %>"><strong><%= shiur.name %></strong></a>
+      <br>Should take about <%= shiur.time %> of an hour.
+    </li>
   <% end %>
 </ul>
