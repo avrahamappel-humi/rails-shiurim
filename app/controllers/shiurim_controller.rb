@@ -15,8 +15,24 @@ class ShiurimController < ApplicationController
 
   def update
     shiur = Shiur.find params[:id]
-    shiur.update params.require(:shiur).permit(:name)
+    shiur.update shiur_params
 
     redirect_to shiur
+  end
+
+  def new
+    @shiur = Shiur.new
+  end
+
+  def create
+    shiur = Shiur.create shiur_params
+
+    redirect_to shiur
+  end
+
+  private
+
+  def shiur_params
+    params.require(:shiur).permit(:name)
   end
 end
