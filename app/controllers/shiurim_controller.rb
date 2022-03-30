@@ -2,7 +2,9 @@
 
 class ShiurimController < ApplicationController
   def index
-    @shiurim = Shiur.order(:importance).all
+    @shiurim = Shiur
+               .order(:importance)
+               .where("importance < ?", 3)
   end
 
   def show
@@ -28,6 +30,12 @@ class ShiurimController < ApplicationController
     shiur = Shiur.create shiur_params
 
     redirect_to shiur
+  end
+
+  def destroy
+    Shiur.find(params[:id]).destroy!
+
+    redirect_to shiurim_url
   end
 
   private
