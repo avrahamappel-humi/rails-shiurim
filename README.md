@@ -1,24 +1,7 @@
-# README
+# Rails Shiurim
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A mini Rails project that I'm using to learn Rails.
 
-Things you may want to cover:
+Here's a link to the course I'm taking:
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+https://online.pragmaticstudio.com/tour/courses/rails/
