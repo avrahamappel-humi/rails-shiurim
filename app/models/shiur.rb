@@ -1,0 +1,2 @@
+class Shiur < ApplicationRecord
+end
