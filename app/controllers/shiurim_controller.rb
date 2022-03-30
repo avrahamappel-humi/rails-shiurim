@@ -8,4 +8,15 @@ class ShiurimController < ApplicationController
   def show
     @shiur = Shiur.find(params[:id])
   end
+
+  def edit
+    @shiur = Shiur.find params[:id]
+  end
+
+  def update
+    shiur = Shiur.find params[:id]
+    shiur.update params.require(:shiur).permit(:name)
+
+    redirect_to shiur
+  end
 end
