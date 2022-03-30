@@ -10,7 +10,7 @@
 #   inflect.uncountable %w( fish sheep )
 # end
 ActiveSupport::Inflector.inflections do |inflect|
-  inflect.irregular 'shiur', 'shiurim'
+  inflect.irregular "shiur", "shiurim"
 end
 
 # These inflection rules are supported but not enabled by default:
