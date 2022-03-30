@@ -2,6 +2,6 @@
 
 class ShiurimController < ApplicationController
   def index
-    @shiurim = ['Daf Yomi', 'Tanach Yomi', 'Rambam Yomi']
+    @shiurim = Shiur.order(:importance).all
   end
 end
