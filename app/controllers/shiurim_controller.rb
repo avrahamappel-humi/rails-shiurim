@@ -8,7 +8,7 @@ class ShiurimController < ApplicationController
   end
 
   def show
-    @shiur = Shiur.find(params[:id])
+    @shiur = Shiur.find params[:id]
   end
 
   def edit
@@ -16,10 +16,13 @@ class ShiurimController < ApplicationController
   end
 
   def update
-    shiur = Shiur.find params[:id]
-    shiur.update shiur_params
+    @shiur = Shiur.find params[:id]
 
-    redirect_to shiur
+    if @shiur.update shiur_params
+      redirect_to @shiur
+    else
+      render :edit
+    end
   end
 
   def new
@@ -27,9 +30,13 @@ class ShiurimController < ApplicationController
   end
 
   def create
-    shiur = Shiur.create shiur_params
+    @shiur = Shiur.new shiur_params
 
-    redirect_to shiur
+    if @shiur.save
+      redirect_to shiur
+    else
+      render :new
+    end
   end
 
   def destroy

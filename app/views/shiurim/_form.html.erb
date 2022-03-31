@@ -1,3 +1,12 @@
+<% if @shiur.errors.any? %>
+  <h2>Errors</h2>
+  <ul>
+    <% @shiur.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+    <% end %>
+  </ul>
+<% end %>
+
 <%= form_with(model: @shiur, local: true) do |form| %>
   <%= form.label :name %>
   <%= form.text_field :name %>
