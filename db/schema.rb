@@ -10,7 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_03_30_151345) do
+ActiveRecord::Schema.define(version: 2022_03_31_180219) do
+
+  create_table "learners", force: :cascade do |t|
+    t.string "name"
+    t.boolean "active"
+    t.integer "shiur_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["shiur_id"], name: "index_learners_on_shiur_id"
+  end
 
   create_table "shiurim", force: :cascade do |t|
     t.string "name"
@@ -20,4 +29,5 @@ ActiveRecord::Schema.define(version: 2022_03_30_151345) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  add_foreign_key "learners", "shiurim"
 end

@@ -2,6 +2,16 @@
 
 <br>
 
+<h2>Who's learning?</h2>
+
+<ul>
+  <% @shiur.learners.each do |l| %>
+    <li><%= l.name %> <i><%= "Active" if l.active %></i></li>
+  <% end %>
+</ul>
+
+<br>
+
 <%= link_to("Back", shiurim_path) %>
 
 <br>
