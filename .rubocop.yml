@@ -1,3 +1,8 @@
+AllCops:
+  Exclude:
+    - Gemfile
+    - Gemfile.lock
+
 Style/Documentation:
   Enabled: false
 
