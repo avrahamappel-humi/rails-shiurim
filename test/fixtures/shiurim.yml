@@ -1,11 +1,16 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  name: MyString
+  name: "Daf Yomi"
   importance: 1
-  time: 9.99
+  time: 1.0
 
 two:
-  name: MyString
-  importance: 1
-  time: 9.99
+  name: "Tanach Yomi"
+  importance: 2
+  time: 0.25
+
+three:
+  name: "Rambam Yomi"
+  importance: 3
+  time: 0.5
